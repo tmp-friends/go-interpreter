@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  go-interpreter:
+    image: tmp-friends/go-interpreter:latest
+    container_name: go-interpreter
+    command: "air"
+    volumes:
+      - ../..:/go/go-interpreter/
+    tty: true
+    ports:
+      - "8080:8080"
